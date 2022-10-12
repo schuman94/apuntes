@@ -200,7 +200,8 @@ Dos objetos son identicos si son el mismo objeto (===)
 
 POSTGRESQL
 sudo apt update
-sudo apt install POSTGRESQLsudo systemctl tatus postgresql.service
+sudo apt install postgresql
+sudo systemctl status postgresql.service
 sudo -u postgres psql -l
 sudo -u postgres createuser -P nombredelusuarioigualqueeldelabasededatos
 

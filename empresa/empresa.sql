@@ -14,7 +14,7 @@ CREATE TABLE empleados (
     nombre varchar(255) NOT NULL,
     salario numeric(7,2) NOT NULL,
     fecha_nac timestamp NOT NULL,
-    departamento_id bigint NOT NULL REFERENCES departamentos(id),
+    departamento_id bigint NOT NULL REFERENCES departamentos(id)
 );
 
 -- Fixtures:

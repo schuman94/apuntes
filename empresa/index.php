@@ -62,7 +62,7 @@
     }
     $pdo = new PDO('pgsql:host=localhost;dbname=empresa', 'empresa', 'empresa');
     $pdo->beginTransaction();
-    $sent = $pdo->query('LOCK TABLE departamentos IN SHARE MODE');
+    $pdo->query('LOCK TABLE departamentos IN SHARE MODE');
     $sent = $pdo->prepare("SELECT COUNT(*)
                              FROM departamentos
                             $where");

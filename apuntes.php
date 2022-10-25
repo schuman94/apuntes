@@ -205,7 +205,7 @@ sudo systemctl status postgresql.service
 sudo -u postgres psql -l
 sudo -u postgres createuser -P nombredelusuarioigualqueeldelabasededatos
 
-sudo -u postgres createdb nombredelabasededatos
+sudo -u postgres createdb -O nombreusuario nombredelabasededatos
 sudo -u postgres psql -l
 
 psql -h localhost -d nombredelabasededatos -U nombredelusuarioigualqueeldelabasededatos

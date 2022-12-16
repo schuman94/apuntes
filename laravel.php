@@ -46,3 +46,17 @@ Para insertar datos ahora puedes crear una instancia del objeto y añadirle valo
 Luego aplicas el metodo save() a ese objeto y se guarda como fila en la tabla de la base de datos.
 
 El save() tambien sirve para hacer un update en la bbdd, modificas el atributo que quieras y haces el save().
+
+Instalar la extension clockwork en google chrome
+Y luego tambien lo instalamos para laravel siguiendo las instrucciones en: https://underground.works/clockwork/
+
+Tambien es interesante instalar con el composer la barra de depuracion de laravel (laravel debug bar)
+
+Instalar el flowbite en laravel: npm install -D flowbite
+
+ctrl+p nos sirve para buscar ficheros en laravel
+
+Las plantillas estan en resource/views
+Una clase y una plantilla forman un componente
+Si yo dentro de los layouts creo una subcarpeta para organizar los layout, hay que indicar en la clase del componente (app/View/Components) que la ruta es distinca: return view('layouts.guests.navigation')
+(En verdad hay componentes que no tienen clase asociada, pero como minimo una plantilla tiene que tener)

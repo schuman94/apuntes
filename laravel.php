@@ -58,5 +58,14 @@ ctrl+p nos sirve para buscar ficheros en laravel
 
 Las plantillas estan en resource/views
 Una clase y una plantilla forman un componente
-Si yo dentro de los layouts creo una subcarpeta para organizar los layout, hay que indicar en la clase del componente (app/View/Components) que la ruta es distinca: return view('layouts.guests.navigation')
+Si yo dentro de los layouts creo una subcarpeta para organizar los layout, hay que indicar en la clase del componente (app/View/Components) que la ruta es distinca: return view('layouts.guest.navigation')
 (En verdad hay componentes que no tienen clase asociada, pero como minimo una plantilla tiene que tener)
+
+convertir (castear) un array en un objeto de la clase standard class:  (object) $array
+
+Articulo::all() devuelve un array de instancias de articulos (porque  tenemos una tabla articulo)
+
+ para trabajar con sesiones podemos usar una funcion helper o el contenedor de inyeccion de dependencias:
+ session('carrito')
+
+ dd() es una combinacion de var_dump y die

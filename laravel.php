@@ -69,3 +69,16 @@ Articulo::all() devuelve un array de instancias de articulos (porque  tenemos un
  session('carrito')
 
  dd() es una combinacion de var_dump y die
+
+ en las rutas se pueden poner un ->whereNumber('id') y asi le indicas que el segmento de la ruta del id tiene que ser un numero.
+
+ tambien se le puede dar un name, y este ya lo puedes usar en los href en vez de poner la ruta, no vaya a ser que la ruta cambie.
+
+ variables de sesion de tipo flash (que solo existen durante un turno, perfecta para alerts de error):
+ session()->flash('error', 'blabla')
+
+ redirect()->route('nombre')  sirve para hacer redireccion usando el nombre en vez de la uri.
+
+
+ En app te puedes crear un fichero helpers.php para crear funciones. Y luego en el autoload puedes meter ese fichero para que asi las funciones siempre se reconozcan.
+ Y si no funciona pon el comando composer dump autoload por si acaso lo arregla

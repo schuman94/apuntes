@@ -82,3 +82,25 @@ Articulo::all() devuelve un array de instancias de articulos (porque  tenemos un
 
  En app te puedes crear un fichero helpers.php para crear funciones. Y luego en el autoload puedes meter ese fichero para que asi las funciones siempre se reconozcan.
  Y si no funciona pon el comando composer dump autoload por si acaso lo arregla
+
+
+Partimos de un clone:
+gh repo clone blabla
+nos metemos en el directorio
+composer install (reconstruye la carpeta vendor)
+npm install
+copiar el .env.example  y crear un .env y meterle los datos sobre todo de la base de datos  (pgsql, puerto 5432, nombre de la base de datos, usuario y contraseña)
+tambien hay que crear la base de datos:
+sudo -u postgres create user -P NombreUsuario
+sudo -u postgres createdb -O NombreUsuario NombreBBDD
+php artisan db (para comprobar que nos podemos conectar a la bbdd)
+php artisan migrate (se crean las migraciones)
+php artisan serve (en una ventana aparte)
+npm run dev (en una ventana aparte)
+php artisan key:generate (esto es para que en el .env se rellene el APP_KEY)
+le podemos meter datos de prueba desde la base de datos o desde la propia aplicacion web o el eloquent desde el tinker
+
+
+Si lo que queremos es iniciar un proyecto nuevo:
+composer create-project laravel/laravel
+y hacemos tambien las cositas de antes.
